@@ -1,3 +1,3 @@
-# pyspark_fm
+# idempotent
 
-factorization machine by pyspark
+实现函数的幂等
