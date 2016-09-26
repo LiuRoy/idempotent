@@ -27,4 +27,4 @@ def test(strategy, a1, a2):
     print strategy.add(func2, args=[b])
 
 
-test(None, 1, 1)
+test(None, 2, 6)

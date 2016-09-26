@@ -32,17 +32,17 @@ def function_key_generator(namespace, fn):
     return generate_key
 
 
-def idem(redis_client, napespace, expiration_time):
+def idem(redis_client, namespace, expiration_time):
     """幂等装饰器
 
     Args:
         redis_client (StrictRedis): reids客户端
-        napespace (string): 名字空间
+        namespace (string): 名字空间
         expiration_time (int): 过期时间
     """
 
     def wrapper(fn):
-        key_generator = function_key_generator(napespace, fn)
+        key_generator = function_key_generator(namespace, fn)
 
         @functools.wraps(fn)
         def inner(*args, **kwargs):
